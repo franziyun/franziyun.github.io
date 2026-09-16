@@ -12,13 +12,6 @@ interface Props {
 const { locale } = Astro.props;
 const recent = await getRecentPosts(5);
 
-const cards = [
-  { href: '/mir', title: t(locale, 'nav.mir'), sub: 'Études', desc: t(locale, 'card.mir.desc') },
-  { href: '/essays', title: t(locale, 'nav.essays'), sub: 'Feuilleton', desc: t(locale, 'card.essays.desc') },
-  { href: '/playground', title: t(locale, 'nav.playground'), sub: 'Spielplatz', desc: t(locale, 'card.playground.desc') },
-  { href: '/research', title: t(locale, 'nav.research'), sub: null, desc: t(locale, 'card.research.desc') },
-];
-
 const links = [
   { label: 'GitHub', href: profile.links.github },
   { label: 'Scholar', href: profile.links.scholar },
@@ -81,18 +74,6 @@ const links = [
         </li>
       ))}
     </ul>
-  </section>
-
-  <section class="cards">
-    {cards.map((card) => (
-      <a class="plate" href={localePath(locale, card.href)}>
-        <p class="card-title">
-          {card.title}
-          {card.sub && <span class="ornament card-sub"> — {card.sub}</span>}
-        </p>
-        <p class="card-desc">{card.desc}</p>
-      </a>
-    ))}
   </section>
 
   <section>
@@ -221,31 +202,6 @@ const links = [
     white-space: nowrap;
   }
 
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-    margin-top: 2.5rem;
-  }
-
-  .card-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--henle);
-    margin: 0;
-  }
-
-  .card-sub {
-    font-size: 0.82rem;
-    font-weight: 400;
-  }
-
-  .card-desc {
-    font-size: 0.83rem;
-    color: var(--muted);
-    margin: 0.25rem 0 0;
-  }
-
   .timeline {
     list-style: none;
     padding: 0;
@@ -304,10 +260,6 @@ const links = [
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
-
-    .cards {
-      grid-template-columns: 1fr;
     }
 
     .recent li {
