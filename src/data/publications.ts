@@ -18,15 +18,18 @@ export interface Project {
 }
 
 export const publications: Publication[] = [
-  // ✏️ 예시 항목 — 실제 논문으로 교체
   {
-    title: 'Your first paper title goes here',
-    authors: '**Jiyun Kim**, Coauthor Name',
-    venue: { full: 'International Society for Music Information Retrieval Conference', short: 'ISMIR' },
+    title:
+      'Who Is Conducting? A Conductor Skeleton Dataset and Identifiability Study from In-the-Wild Orchestral Concert Video',
+    authors: '**Jiyun Kim**, Dasaem Jeong',
+    venue: {
+      full: 'ISMIR Late-Breaking Demo — under review',
+      short: 'ISMIR LBD',
+    },
     year: 2026,
     links: [
-      { label: 'paper', href: '#' },
-      { label: 'code', href: '#' },
+      { label: 'code & data', href: 'https://github.com/franziyun/conductor-motion-dataset' },
+      { label: 'demo', href: 'https://franziyun.github.io/conductor-motion-dataset/' },
     ],
   },
 ];

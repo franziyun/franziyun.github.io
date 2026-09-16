@@ -39,16 +39,33 @@ export const profile = {
   // ✏️ 뉴스 — 최신이 위로. 오래된 항목은 지우지 말고 아래로.
   news: [
     {
+      date: '2026. 9.',
+      en: 'Submitted our first Late-Breaking Demo to ISMIR 2026.',
+      ko: 'ISMIR 2026에 첫 Late-Breaking Demo를 제출했습니다.',
+      href: '/research',
+    },
+    {
       date: '2026. 7.',
       en: 'Started the FMP Korean commentary series.',
       ko: 'FMP 한국어 해설 연재를 시작했습니다.',
       href: '/mir',
     },
   ],
-  // ✏️ 홈 하단 타임라인 — 최신이 위로. period는 '2025 —'(진행 중) 또는 '2019 – 2023' 형태
+  // ✏️ 홈 하단 타임라인 — 최신이 위로. period는 '2026 —'(진행 중) 또는 '2019 – 2023' 형태
   timeline: [
     {
-      period: '2025 —',
+      period: '2026. 9.',
+      title: {
+        en: 'First paper submitted — ISMIR 2026 Late-Breaking Demo',
+        ko: '첫 논문 제출 — ISMIR 2026 Late-Breaking Demo',
+      },
+      detail: {
+        en: 'Who Is Conducting? A conductor skeleton dataset and identifiability study from in-the-wild concert video.',
+        ko: '실제 공연 영상에서 추출한 지휘자 스켈레톤 데이터셋과 식별 가능성 연구.',
+      },
+    },
+    {
+      period: '2026 —',
       title: {
         en: 'M.S. student, MALerLab, Sogang University',
         ko: '서강대학교 MALerLab 석사과정',
@@ -59,14 +76,14 @@ export const profile = {
       },
     },
     {
-      period: '20XX – 20XX', // ✏️
+      period: '2018 – 2024',
       title: {
-        en: 'B.A. in German Language & Literature', // ✏️ 학교·전공 확인
-        ko: '독어독문학 학사', // ✏️
+        en: 'B.A. in German Language & Literature, Korea University',
+        ko: '고려대학교 독어독문학 학사',
       },
       detail: {
-        en: '', // ✏️ 부전공, 논문 등 (비우면 표시 안 됨)
-        ko: '',
+        en: 'Interdisciplinary major in Brain and Cognitive Sciences.',
+        ko: '뇌인지과학 융합전공.',
       },
     },
   ],
