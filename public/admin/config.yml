@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: juliyooni/juliyooni.github.io
+  repo: franziyun/franziyun.github.io
   branch: main
-site_url: https://juliyooni.github.io
+site_url: https://franziyun.github.io
 media_folder: public/images
 public_folder: /images
 

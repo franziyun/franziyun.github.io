@@ -5,7 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
-  site: 'https://juliyooni.github.io',
+  site: 'https://franziyun.github.io',
   integrations: [sitemap()],
   i18n: {
     locales: ['en', 'ko'],

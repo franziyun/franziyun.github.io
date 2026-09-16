@@ -64,7 +64,7 @@ export const profile = {
   ],
   portrait: '/portrait.svg', // ✏️ public/portrait.jpg 넣고 '/portrait.jpg'로 변경
   links: {
-    github: 'https://github.com/juliyooni',
+    github: 'https://github.com/franziyun',
     scholar: '', // ✏️ Google Scholar 프로필 URL
     email: 'mailto:jiyunjulik@gmail.com',
     cv: '', // ✏️ CV PDF를 public/cv.pdf 로 넣고 '/cv.pdf'

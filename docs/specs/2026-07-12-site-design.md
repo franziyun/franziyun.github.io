@@ -1,4 +1,4 @@
-# juliyooni.github.io — 개인 사이트 설계 스펙
+# franziyun.github.io — 개인 사이트 설계 스펙
 
 2026-07-12, 브레인스토밍 세션에서 확정된 결정사항.
 
@@ -12,7 +12,7 @@ MIR 연구자 Jiyun Kim(김지윤, MALerLab 석사과정)의 개인 사이트.
 
 | 항목 | 결정 |
 |---|---|
-| 호스팅 | GitHub Pages (`juliyooni` 계정, `juliyooni.github.io`) |
+| 호스팅 | GitHub Pages (`franziyun` 계정, `franziyun.github.io`) |
 | 스택 | Astro (Content Collections, MDX 없이 md + KaTeX), 정적 출력 |
 | 언어 | **영어 기본 + 한국어 토글**, 토글 버튼은 헤더에 눈에 띄게. UI·Research·About은 완전 이중 언어, 글 본문은 쓴 언어로만 (EN 모드에서 한국어 전용 글엔 "Korean only" 뱃지) |
 | 디자인 | **A. 우어텍스트 에디션** — 헨레/베렌라이터 악보집 감성. 크림 종이(#F7F2E5), Cormorant Garamond(세리프 디스플레이) + IBM Plex Sans KR(본문), 헨레 블루(#1F3A5F) 악센트, 오선 모티프 |
