@@ -7,6 +7,11 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
   site: 'https://franziyun.github.io',
   integrations: [sitemap()],
+  // About 페이지는 홈에 통합됨 — 옛 링크는 홈으로
+  redirects: {
+    '/about': '/',
+    '/ko/about': '/ko',
+  },
   i18n: {
     locales: ['en', 'ko'],
     defaultLocale: 'en',

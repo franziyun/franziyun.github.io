@@ -18,11 +18,19 @@ export const profile = {
     en: 'M.S. student · MALerLab, Sogang University',
     ko: '서강대학교 MALerLab 석사과정',
   } satisfies Bilingual,
-  // ✏️ 소개문
-  bio: {
-    en: 'I study music information retrieval — how machines listen to music. Having studied German literature, I also write about the places where music and literature overlap. This site is a lab, a feuilleton, and a playground.',
-    ko: '음악 정보 검색(MIR)을 연구합니다. 기계가 음악을 어떻게 듣는지 궁리하고, 독문학을 공부했던 사람으로서 음악과 문학이 겹치는 자리에 대해 씁니다. 이 사이트는 연구실이자 문예란이자 놀이터입니다.',
-  } satisfies Bilingual,
+  // ✏️ 소개문 — 홈 인트로에 문단별로 표시됩니다
+  about: {
+    en: [
+      `I am a master's student at MALerLab, Sogang University, working on music information retrieval.`,
+      `Before turning to MIR, I studied German literature. That background still shapes how I listen: a song is never just a signal to me — it is also a poem, a text, a history. Much of my writing here lives in that overlap.`,
+      `This site has three rooms: MIR notes in Korean (including a chapter-by-chapter companion to Müller's Fundamentals of Music Processing), essays between music and literature, and a small playground of browser instruments.`,
+    ],
+    ko: [
+      `서강대학교 MALerLab에서 음악 정보 검색(MIR)을 공부하는 석사과정생입니다.`,
+      `MIR에 오기 전에는 독문학을 공부했습니다. 그 배경은 지금도 제가 음악을 듣는 방식을 만듭니다 — 저에게 노래는 신호이기만 한 적이 없고, 언제나 시이고 텍스트이고 역사이기도 합니다. 이 사이트의 글 대부분은 그 겹침 위에 있습니다.`,
+      `이 사이트에는 방이 세 개 있습니다. 한국어로 쓰는 MIR 노트(Müller의 Fundamentals of Music Processing을 챕터별로 해설하는 연재 포함), 음악과 문학 사이의 에세이, 그리고 브라우저 악기들의 작은 놀이터.`,
+    ],
+  } satisfies Record<Locale, string[]>,
   // ✏️ 관심사
   interests: {
     en: ['symbolic music', 'music generation', 'orchestral music', 'Lied and poetry'],
@@ -37,7 +45,7 @@ export const profile = {
       href: '/mir',
     },
   ],
-  // ✏️ About 페이지 타임라인 — 최신이 위로. period는 '2025 —'(진행 중) 또는 '2019 – 2023' 형태
+  // ✏️ 홈 하단 타임라인 — 최신이 위로. period는 '2025 —'(진행 중) 또는 '2019 – 2023' 형태
   timeline: [
     {
       period: '2025 —',

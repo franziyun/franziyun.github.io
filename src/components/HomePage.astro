@@ -48,7 +48,9 @@ const links = [
     </div>
     <div class="intro-body">
       <p class="ornament affiliation">{profile.affiliation[locale]}</p>
-      <p class="bio" lang={locale}>{profile.bio[locale]}</p>
+      <div class="bio" lang={locale}>
+        {profile.about[locale].map((para) => <p>{para}</p>)}
+      </div>
       <p class="row">
         <span class="label">{t(locale, 'home.interests')}</span>
         <span class="row-body">{profile.interests[locale].join(' · ')}</span>
@@ -91,6 +93,23 @@ const links = [
         <p class="card-desc">{card.desc}</p>
       </a>
     ))}
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="label">Timeline</span>
+    </div>
+    <ol class="timeline">
+      {profile.timeline.map((item) => (
+        <li>
+          <span class="period ornament">{item.period}</span>
+          <span class="entry">
+            <span class="entry-title">{item.title[locale]}</span>
+            {item.detail[locale] && <span class="entry-detail">{item.detail[locale]}</span>}
+          </span>
+        </li>
+      ))}
+    </ol>
   </section>
 </Base>
 
@@ -149,7 +168,14 @@ const links = [
   .bio {
     font-size: 0.94rem;
     line-height: 1.8;
-    margin: 0;
+  }
+
+  .bio p {
+    margin: 0 0 0.7rem;
+  }
+
+  .bio p:last-child {
+    margin-bottom: 0;
   }
 
   .bio:lang(ko) {
@@ -220,6 +246,59 @@ const links = [
     margin: 0.25rem 0 0;
   }
 
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0;
+  }
+
+  .timeline li {
+    display: flex;
+    gap: 1.4rem;
+    padding: 0.65rem 0;
+    border-left: 1px solid var(--line-strong);
+    padding-left: 1.4rem;
+    position: relative;
+  }
+
+  /* 마디선 위의 음표처럼 — 각 항목 지점의 노트헤드 */
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: -4.5px;
+    top: 1.35rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--henle);
+  }
+
+  .period {
+    font-size: 0.88rem;
+    min-width: 6.2rem;
+    flex-shrink: 0;
+    padding-top: 0.05rem;
+  }
+
+  .entry {
+    min-width: 0;
+  }
+
+  .entry-title {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    word-break: keep-all;
+  }
+
+  .entry-detail {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+    word-break: keep-all;
+  }
+
   @media (max-width: 560px) {
     .intro {
       flex-direction: column;
@@ -235,6 +314,11 @@ const links = [
       flex-direction: column;
       gap: 0;
       padding: 0.45rem 0;
+    }
+
+    .timeline li {
+      flex-direction: column;
+      gap: 0.15rem;
     }
   }
 </style>
