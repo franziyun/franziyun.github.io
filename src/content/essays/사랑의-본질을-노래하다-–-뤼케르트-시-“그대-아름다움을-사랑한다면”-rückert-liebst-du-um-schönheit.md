@@ -3,7 +3,7 @@ title: 사랑의 본질을 노래하다 – 뤼케르트 시 “그대 아름다
 description: 사랑의 본질을 노래하다 – 뤼케르트 시 “그대 아름다움을 사랑한다면”(Rückert-Liebst du um Schönheit)
 date: 2026-09-16
 lang: ko
-draft: true
+draft: false
 ---
 
 사랑의 본질을 노래하다 – 뤼케르트 시 “그대 아름다움을 사랑한다면”(Rückert-Liebst du um Schönheit)
