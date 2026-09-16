@@ -61,23 +61,6 @@ const links = [
 
   <section>
     <div class="section-head">
-      <span class="label">{t(locale, 'home.recent')}</span>
-    </div>
-    {recent.length === 0 && <p class="ornament">— tacet —</p>}
-    <ul class="recent">
-      {recent.map(({ section, post }) => (
-        <li>
-          <a href={postPath(section, post)} lang={post.data.lang}>{post.data.title}</a>
-          <span class="ornament meta">
-            {t(locale, section === 'mir' ? 'nav.mir' : 'nav.essays')} · {formatDate(locale, post.data.date)}
-          </span>
-        </li>
-      ))}
-    </ul>
-  </section>
-
-  <section>
-    <div class="section-head">
       <span class="label">Timeline</span>
     </div>
     <ol class="timeline">
@@ -91,6 +74,23 @@ const links = [
         </li>
       ))}
     </ol>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="label">{t(locale, 'home.recent')}</span>
+    </div>
+    {recent.length === 0 && <p class="ornament">— tacet —</p>}
+    <ul class="recent">
+      {recent.map(({ section, post }) => (
+        <li>
+          <a href={postPath(section, post)} lang={post.data.lang}>{post.data.title}</a>
+          <span class="ornament meta">
+            {t(locale, section === 'mir' ? 'nav.mir' : 'nav.essays')} · {formatDate(locale, post.data.date)}
+          </span>
+        </li>
+      ))}
+    </ul>
   </section>
 </Base>
 
